@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="You've found a random person.">
+        <link rel="stylesheet" href="../styles.css">
+        <title>Writings</title>
+    </head>
+   
+    <body>
+        <nav>
+            <a href="../index.html">Home</a>
+            <span>/</span>
+            <a href="../about.html">About</a>
+            <span>/</span>
+            <a href="writings.html">Writings</a>
+            <span>/</span>
+            <a href="../works.html">Works</a>
+        </nav>
+        
+        <main>
+        <h1>[Actively Updating] 100 days of SwiftUI</h1> 
+        <p>About a month ago, I read blap's <a href="https://skunkledger.substack.com/p/escaping-high-school">Escaping High School</a> (which you might also want to read) and I was very convinced that I must start working on my social skills and ask for help from adults in the area to "get as close as possible to the adult version". It immediatly came to my mind that I want to learn [whatever I need to code for iOS apps] to help contributing to my favorite app, <a href="https://screenzen.app">ScreenZen</a>, other than just doing community help and donating.</p>
+        <p>So, I wrote up a paragraph of message and sent it to their only full time developer Tyler's discord DM. Since I didn't get a response, I was reflecting on potential issues of my message, e.g. did I clearly asked for something easy to phrase? and have forgotten about the message. Yet I actually recieved a reply few days ago! He gave me the link to <a href="https://www.hackingwithswift.com/100/swiftui">100 days of SwiftUI</a>, which I decided to follow along starting from 25 Nov 11.</p>
+        <div>
+        <h2>Day 0-14: Introduction to Swift</h2>
+            <h3>Day 0-2</h3>
+            <p>When I started to be recording my studying process of SwiftUI, it's the 2nd day now. I've learned about basic concepts like constants, variables, integers, doubles, booleans, strings, string interpolations and basic arthimetic operations. I'm actually supposed to write a small piece of pre for celcius to farenheit conversion. I do not own a mac which means I can't run Xcode, which I suppose is an easy fix for now. (If I wanted to buy a mac anyways, I can get a cheap one with ~$200 on Temu)</p>
+            <p>Anyways, the code:</p>
+            <pre>
+                <div>
+let celcius = -40
+let farenheit = celcius*9/5+32
+print ("\(celcius)° celcius is \(farenheit)° farenheit.")
+                </div>        
+            </pre>
+
+            <h3>Day 3</h3>
+            <p>I got pretty confused by the concepts of arrays, dictionaries, sets and enums. I doubt if I don't start writing Swift code right now, I'll have forgotten them. It'll be fine, though, because I was googling pretty constantly while building this website.</p>
+            
+            <h3>Day 4</h3>
+            <p>I'm still getting confused. Annotation feels easy, though. Luckily there's a checkpoint coding challenge to save my day, which requires printing the elements inside an array, then print the unique elements. This is very easily done by sets, since they only allow unique elements.</p>
+            <pre>
+                <div>
+let clothes = ["black", "black", "black and white", "white"]
+print(clothes)
+print(clothes.count)
+
+let uniqueClothes : Set&lt;String&gt; = Set(clothes)
+print(uniqueClothes)
+print(uniqueClothes.count)
+                </div>
+            </pre>
+            <p>Some mistakes I made: 1. I didn't use uppercase for "Set" at first; 2. I didn't add the colon in the fourth line. There's still a lot to learn in Swift. (By the way, my clothes are really rather black, white, or black & white. If it isn't, I would hide it somewhere I can't see.)</p>
+            
+            <h3>Day 5</h3>
+            <p>Today is about conditions. I learned about if/elif/else, switch statements and ternary operators (along with some binary operators, of course). I can't spare too much time on learning Swift and I just hope to have coding challenges right now.</p>
+
+            <h3>Day 6</h3>
+            <p>For loops, while loops and continue/break condition with a small summary and coding challenge. It's actually amazing that by splitting larger tasks into smaller ones and do them everyday, you could learn quite a lot over less than a week. <br> I found this hilarious: "The ternary conditional operator lets us check WTF: What, True, False."<br>The coding challenge goes as follows:"The problem is called fizz buzz, and has been used in job interviews, university entrance tests, and more for as long as I can remember. Your goal is to loop from 1 through 100, and for each number:<br>If it's a multiple of 3, print “Fizz”<br>If it's a multiple of 5, print “Buzz”<br>If it's a multiple of 3 and 5, print “FizzBuzz”<br>Otherwise, just print the number."</p>
+            <pre>
+                <div>
+for i in 1...100{
+ if i.isMultiple(of:3) && i.isMultiple(of:5){
+   print("FizzBuzz")
+
+  }else if i.isMultiple(of:3){
+     print("Fizz")
+    
+  }else if i.isMultiple(of:5){
+    print("Buzz")
+  }else{
+    print(i)
+  }
+
+}
+                </div>
+            </pre>
+            <p>I've made at least 4 grammar mistakes here (that's partially why I like coding challenges):<br>1. I wrote _ instead of i; <br>2. I wrote ismultipleof(3); <br>3. I wrote else{if condition {print("String")}}, <br>4. I wrote print(\(i)) which is a string interpolation.<br>5. I wrote string interpolaration for 4 at first. Probably because I saw polarizing in E8 today.<br>This can also be solved more elegantly with switch, and more messily with continue. But I'm a bit lazy and want to go sleep for now.</p>
+
+            <h3>Day 7</h3>
+            <p>Functions. I felt like rushing through this part but: return values, tuples, external and internal parameter names, function labels. Since I'll have to start build bigger projects pretty soon, I think I should consider buying a mac or find a good Xcode alternative.</p>
+            
+            <h3>Day 8</h3>
+            <p>Actually, it's already Day9 (midnight) by this time, yet I haven't finished 1/4 of Day8, and I have a coding challenge to do. Someone send help.</p>
+            <p>I finished the coding challenge. I was so out of my mind that I have to copy other's solutions to deduce my error.</p>
+            <pre>
+                <div>enum SquareRootErrors: Error {
+  case Out
+  case None
+}
+
+func SquareRoot(_ number:Int = 1, end: Int = 10_000) throws -> Int {
+    if (number < 1 || number > 10_000) {
+        throw SquareRootErrors.Out 
+    }
+    
+    for i in 1...100 { 
+        if i * i == number {
+            return i
+        }
+    }
+    
+    throw SquareRootErrors.None
+}
+
+
+do {
+  let result = try SquareRoot(16)
+  print("The squareroot of this number is \(result).")
+} catch SquareRootErrors.Out{
+  print("Oops, can't do numbers outside of 1 to 10000.")
+} catch SquareRootErrors.None{
+  print("This number doesn't have a integer square root!")
+} catch {
+  print("There was an error.")
+}
+                </div>
+            </pre>
+            <p>Some errors I made: 1. Not using "in" in "for i in 1...100" 2. within the do element, I wrote SquareRootError without s at the end. The latter took me about 10 minutes to deduce. I want to sleep now.</p>
+            
+            <h3>Day9</h3>
+            <p>I'm not like "omg why do closures even exist" but they are indeed a bit hard to digest. Especially when I'm experiencing low mood.</p>
+            <pre>
+              <div>
+let luckyNumbers = [7, 4, 38, 21, 16, 15, 12, 33, 31, 49]
+
+let result = luckyNumbers
+    .filter { !$0.isMultiple(of: 2) }
+    .sorted()
+    .map { "\($0) is a lucky number" }  
+
+for line in result {
+    print(line)
+}
+              </div>
+            </pre>
+
+            <h3>Taking some rest</h3>
+            <p>Since PMDD hit in and I'm still a physics olympiad main, I'll be slowing down my progress until next cycle starts.</p>
+            
+            <h3>Day10</h3>
+            </main>
+</body>
+
+    <footer>
+        <hr>
+        ©2025 randompsn all rights reserved.
+    </footer>
+</html>

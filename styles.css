@@ -1,0 +1,340 @@
+:root{
+    --writing-card-dimensions:calc(10vw);
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline:2px solid white;
+    border-radius:5px;
+    transition:ease-in-out 0.2s;    
+    transform:scale(1.1);
+}
+
+html{
+    font-family: Georgia,'Times New Roman', 'Sans Serif';
+    background-image: linear-gradient(to bottom,rgb(4, 4, 4) 0%,rgb(30, 30, 30) 100%);
+    color:#e9e9e9;
+    scroll-behavior: smooth;
+}
+
+
+
+/* Styling anchor elements */
+a{
+    color:#e9e9e9;
+    text-decoration: none;
+    text-shadow:#000000 0.5px 1px 1.5px;
+}
+
+p > a{
+    background: linear-gradient(var(--anchorcolor1,#ffffff), var(--anchorcolor2,#050505));
+    background-clip: text;
+    -webkit-text-fill-color: #ffffff94;
+}
+
+a:hover{
+    transition:ease-in-out 0.3s;
+    color:#fcfcfc;
+    transform: scale(1.1);
+    background-color:#707070;
+    background-clip:padding-box;
+    border-radius: 2px;
+}
+
+/* Styling nav bar */
+
+header{
+    width:100%;
+    display:block;
+    background-image: linear-gradient(to bottom, #080808 0%, #2e2e2e 100%);
+    border-bottom:0.5px solid white;
+    border-radius: 0 5px 5px 0;
+    padding:0.4rem 3rem 0.3rem 3rem;
+    position:sticky;
+    top:0;
+}
+
+
+.nav-bar{ 
+    margin:0 50px;
+    padding:10px 10px 10px 0;
+    gap: 1rem;
+    max-width: 100vw;
+
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.nav-links{
+    display:flex;
+    color:#e9e9e9;
+    gap:0.75rem;
+}
+
+
+nav span{
+    color: #858585;
+    pointer-events: none;
+}
+
+/* Styling about page*/
+.about, .random > p{
+    display:block;
+    justify-content: center;
+
+    min-width:30rem;
+    max-width:60rem;
+    padding:calc(3px + 0.5%) calc(5px + 2%) calc(2px + 3%);
+    margin:20px calc(-100px + 20vw);
+
+    border:1px solid hsla(0,0%,100%,0.3);
+    border-radius:5px;
+    background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#262626 100%);
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+}
+
+.poems{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(160,1em);
+    height:160rem;
+}
+
+#emperor{
+    grid-column: 1;
+    grid-row:1 / 18;
+}
+
+#earth{
+    grid-column: 2;
+    grid-row:1 / 26;
+}
+
+#kite{
+    grid-column: 3;
+    grid-row:1 / 42;
+}
+
+#something{
+    grid-column: 1;
+    grid-row: 18 / 32;
+}
+
+#excerpt-from-The-Vinaya{
+    grid-column:2;
+    grid-row: 26 / 42;
+}
+
+#sunshine{
+    grid-column:1;
+    grid-row: 32 / 42;
+}
+
+#ode-to-past{
+    grid-column:1;
+    grid-row: 42 / 74;
+}
+
+#nothingness{
+    grid-column:2;
+    grid-row: 42 / 46;
+    overflow-y: hidden;
+}
+
+#white-sky{
+    grid-column:3;
+    grid-row: 42 / 54;
+}
+
+#human{
+    grid-column:2;
+    grid-row: 46 / 74;
+}
+
+#PHOTO€L€CTRIC-€FF€CT{
+    grid-column:3;
+    grid-row: 55 / 74;
+}
+
+#dream{
+    grid-column: 2;
+    grid-row:74/134;
+}
+
+#hide-n-seek{
+    grid-column: 1;
+    grid-row:74/96;
+}
+
+#misconception{
+    grid-column:3;
+    grid-row:74/128;
+}
+
+#knowledge{
+    grid-column:1;
+    grid-row:96/102;
+}
+
+#twisted{
+    grid-column:1;
+    grid-row:102/111;
+}
+
+#narcissus{
+    grid-column:1;
+    grid-row:111/123;
+}
+
+.poems p{
+    justify-content: center;
+    min-width:10rem;
+    width:18rem;
+    max-height:max-content;
+    padding:10px;
+    margin:10px 2vw;
+    border:1px solid hsla(0,0%,100%,0.3);
+    border-radius:5px;
+    background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#262626 100%);
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+}
+
+
+.writings{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.writing{
+    width:var(--writing-card-dimensions,20vw);
+    height:var(--writing-card-dimensions,10vw);
+    padding:10px;
+    margin:2vw;
+    border:1px solid hsla(0,0%,100%,0.3);
+    border-radius:5px;
+    background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#262626 100%);
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+    min-width:10rem;
+    min-height:10rem;
+}
+
+
+
+.ptsd-hidden, .lament-hidden{
+    font-family:'Courier New', Courier, monospace;
+    background-color:#000000;
+}
+
+/* Styling pre elements*/
+pre{
+    overflow-x:auto;
+    background-image: linear-gradient(to bottom,#000 0%, #111111 100%);
+    padding:10px 10px;
+    border-radius: 15px;
+    width:80vw;
+    text-align:left;
+    padding:10px 0 0 0;
+}
+
+pre > div{
+    padding:10px 0 20px 20px;
+}
+
+
+footer{
+    padding:40px;
+    text-align:center;
+    font-size:0.8rem;
+}
+
+
+p{
+    display:block;
+    width:80vw;
+    margin:10px 2px;
+    padding:10px 15px;
+}
+
+hr{
+    transform:scaleY(0.4);
+    max-width:90vw
+}
+
+.artworks{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+
+}
+.artworks .art-images img{
+    width:calc(-150px + 25vw);
+    min-width:300px;
+    margin:10px 10px;
+    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0);
+}
+.artworks .art-images img:hover{
+    transform: scale(1.1);
+    transition:all ease-in-out 0.3s;
+    transition-delay: 0.1s;
+    z-index: 0;
+    box-shadow: 1px 1px 10px 2px rgb(0, 0, 0);
+}
+
+#pfp{
+    clip-path: circle();
+    box-sizing:content-box;
+    height:100px;
+    margin:20px;
+    float:inline-start;
+}
+
+.index{
+    margin:10px;
+}
+
+#index-h1{
+    display:block;
+    text-align:center;
+    font-size:10vw;
+    padding:10px 10px 20px 10px;
+    background-size:1000% 100%;
+    background-image:linear-gradient(to right,transparent 0% 25%, #b9b9b985 35%, transparent 45%, #444 55%, transparent 65% 100%)
+}
+
+#index-h1:hover{
+    animation: welcome 1s cubic-bezier( 0, 0.62, 0.93, 0.79 ) 75ms 1 forwards;
+}
+
+li{
+    list-style-type: disc;
+    color:#ffffff;
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+
+main{
+    display:flex;
+    flex-direction: column;
+}
+
+@keyframes welcome{
+    0%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
