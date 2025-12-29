@@ -148,6 +148,29 @@ for line in result {
 
             <h3>Day11</h3>
             <p></p>
+            <pre>
+              <div>
+enum gearShift{
+  case up, down
+}
+
+struct car {
+  let model : String
+  let seatCount: Int
+  private(set) var gear = 0
+  mutating func changeGear(_ action : gearShift){
+    switch action {
+      case .up:  gear &lt; 10 ? gear += 1 : print("Gear is high enough.")
+      case .down: gear > 1 ? gear -= 1 : print("Gear is low enough.")
+    }
+  }
+}
+
+var Tesla = car(model: "Tesla", seatCount: 5, gear: 4)
+print(Tesla.model)
+Tesla.changeGear(gearShift.down)
+</div>
+            </pre>
             </main>
 </body>
 
