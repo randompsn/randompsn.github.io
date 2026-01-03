@@ -269,7 +269,7 @@ nav > p{
     grid-row:111/124;
 }
 
-.poems p{
+.poems-grid p{
     justify-content: center;
 
     width:18rem;
@@ -288,13 +288,13 @@ nav > p{
 
 
 /* Writings page WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
-.writings{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
+.writings-whole-container{
+    display:block;
+    justify-content: center;
 }
 
-.writing{
+
+.writing-card{
     width:var(--writing-card-dimensions,20vw);
     height:var(--writing-card-dimensions,10vw);
     min-width:10rem;
@@ -313,7 +313,8 @@ nav > p{
     transition: 0.3s ease-in-out, --writing-gradient-color1 0.3s ease-in-out, --writing-gradient-color2 0.3s ease-in-out, --writing-gradient-color3 0.3s ease-in-out, --card-title-offsetY 0.3s ease-in-out, text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.writing:hover{
+
+.writing-card:hover{
     background-image: linear-gradient(to bottom,var(--writing-gradient-color1,#050505) 0%, var(--writing-gradient-color2,#121212) 20%,var(--writing-gradient-color3,#262626) 100%);
     --card-title-offsetY:-0px;
     --writing-gradient-color1:#1a1a1a;
@@ -326,23 +327,77 @@ nav > p{
     box-shadow: 4px 4px 20px 5px #000000a9;
 }
 
-.writings .blog::after{
+.blogs-block{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.creative-block{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.random-block{
+    height:100px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.writing-random-card h3{
+    margin:0;
+}
+
+.writing-random-card{
+    font-size:3rem;
+    letter-spacing: -5px;
+    height:10vw;
+    width:90%;
+
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    
+    background-image:linear-gradient(to bottom,var(--writing-gradient-color1,#050505) 0%, var(--writing-gradient-color2,#121212) 20%,var(--writing-gradient-color3,#262626) 100%);
+    
+}
+
+
+.lists-block{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.writing-list-card{
+    height:50%;
+    width:50%;
+    
+    text-indent:0.5rem;
+}
+
+.writings-whole-container .blog::after{
     content:"#Blog";
 }
 
-.writings .poems::after{
+.writings-whole-container .poems::after{
     content:"#Poems";
 }
 
-.writings .lyrics::after{
+.writings-whole-container .lyrics::after{
     content:"#Lyrics";
 }
 
-.writings .wip::after{
+.writings-whole-container .wip::after{
     content:"#WIP";
 }
 
-.writings .list::after{
+.writings-whole-container .list::after{
     content:"#Lists";
 }
 
