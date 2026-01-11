@@ -164,7 +164,7 @@ nav > p{
     min-width:30rem;
     max-width:100%;
     padding:calc(5px + 1%) calc(5px + 2%) calc(2px + 3%);
-    margin:20px 0;
+    margin:30px 0;
 
     border:1px solid hsla(0,0%,100%,0.3);
     border-radius:5px;
@@ -172,8 +172,14 @@ nav > p{
     box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
 }
 
+.trivia-lists{
+    margin:50px 0;
+}
 
-
+#ranThonk{
+    width:20vw;
+    margin:0;
+}
 
 /* Poems */
 .poems-grid{
@@ -519,7 +525,7 @@ footer hr{
     min-width:300px;
 }
 
-.artworks .art-images img:hover{
+.artworks .art-images img:hover, #cannotCome:hover{
     transform: scale(1.1);
     transition:all ease-in-out 0.3s;
     transition-delay: 0.1s;
@@ -567,6 +573,14 @@ footer hr{
     height:100px;
     margin:20px;
     float:inline-start;
+}
+
+#cannotCome{
+    width:50%;
+    margin: 10px 20px;
+    float:inline-end;
+    border-radius: 10%;
+    transition:all ease-in-out 0.3s;
 }
 
 
