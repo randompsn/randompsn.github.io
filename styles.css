@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 *:focus{
     outline:2px solid white;
     border-radius:5px;
@@ -172,6 +173,10 @@ nav > p{
     box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
 }
 
+li{
+    margin:1.5vw;
+}
+
 .trivia-lists{
     margin:50px 0;
 }
@@ -303,7 +308,7 @@ nav > p{
 .writing-card{
     width:var(--writing-card-dimensions,20vw);
     height:var(--writing-card-dimensions,10vw);
-    min-width:10rem;
+    min-width:15rem;
     min-height:10rem;
     height:fit-content;
 
