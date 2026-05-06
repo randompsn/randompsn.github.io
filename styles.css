@@ -440,6 +440,10 @@ li{
     font-family: 'Songti SC';
 }
 
+sup a{
+    text-decoration: dotted underline overline;
+}
+
 @property --writing-gradient-color1{
     syntax:"<color>";
     inherits: false;
