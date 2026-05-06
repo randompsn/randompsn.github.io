@@ -436,6 +436,10 @@ li{
     content:"#Lists";
 }
 
+[lang="cn"]{
+    font-family: 'Songti SC';
+}
+
 @property --writing-gradient-color1{
     syntax:"<color>";
     inherits: false;
