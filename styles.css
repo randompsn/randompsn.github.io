@@ -1,5 +1,5 @@
 :root{
-    --writing-card-dimensions:calc(18vw);
+    --writing-card-dimensions:calc(15vw);
     box-sizing: border-box;
 }
 
@@ -489,7 +489,6 @@ pre{
     background-image: linear-gradient(to bottom,#000 0%, #111111 100%);
     padding:10px 10px;
     border-radius: 15px;
-    width:80vw;
     text-align:left;
 }
 
