@@ -306,7 +306,7 @@ li{
 
 
 .writing-card{
-    width:var(--writing-card-dimensions,20vw);
+    width:var(--writing-card-dimensions,10vw);
     height:var(--writing-card-dimensions,10vw);
     min-width:15rem;
     min-height:10rem;
