@@ -499,6 +499,7 @@ pre > div{
 
 hr{
     transform:scaleY(0.4);
+    width:60vw;
     max-width:80%;
 }
 
