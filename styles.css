@@ -27,7 +27,7 @@ main{
     display:flex;
     flex-direction: column;
     padding: 1.5rem 1rem 3rem;
-    max-width: 60rem;
+    max-width: 70rem;
     margin: 0 auto;
 }
 
@@ -358,7 +358,6 @@ li{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
     background-image: linear-gradient(to bottom,#000,#1f1f1f 20%, #525252 100%);
 }
 
@@ -402,8 +401,8 @@ li{
 .lists-block{
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+
+    width:stretch;
 }
 
 .writing-list-card{
