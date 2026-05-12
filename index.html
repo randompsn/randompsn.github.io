@@ -57,9 +57,10 @@
 
             <div class="random-doodle">
                 <h2>Random Doodle</h2>
+                <p>Refresh for a new one!</p>
                 <script>
                     function randomimg(){
-                    return Math.floor(Math.random() * 25) + 1;
+                    return Math.floor(Math.random() * 121) + 1;
                 }
                     document.write('<img id="randomimg" src= "works/randomDoodle/ran' + randomimg() + '.PNG">');
                     console.log('<img src= "works/randomDoodle/ran' + randomimg() + '.PNG">');
