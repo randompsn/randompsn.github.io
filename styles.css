@@ -594,6 +594,11 @@ footer hr{
     transition:all ease-in-out 0.3s;
 }
 
+#randomimg{
+    width:calc(200px + 10vw + 60%);
+    max-width:min(100%,500px);
+    z-index: -1;
+}
 
 @keyframes welcome{
     0%{
