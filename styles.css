@@ -155,15 +155,11 @@ nav > p{
     display:contents;
 }
 
-*/
-
-
 /* About and random page RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
 .about, .random-p > p{
     display:block;
     justify-content: center;
     
-
     min-width:30rem;
     max-width:100%;
     padding:calc(5px + 1%) calc(5px + 2%) calc(2px + 3%);
@@ -184,7 +180,8 @@ li{
 }
 
 #ranThonk{
-    width:20vw;
+    width:40vw;
+    min-width: 300px;
     margin:0;
 }
 
@@ -361,6 +358,11 @@ li{
     box-shadow: 4px 4px 20px 5px #000000a9;
 }
 
+#beYourStar{
+    max-width: 100%;
+    border:3px solid rgb(219, 219, 219);
+}
+
 .blogs-block{
     display:flex;
     flex-direction: row;
@@ -457,7 +459,7 @@ li{
 
 .writing-random-card:hover article{
     transform: translate(-20px,100px); 
-    width:30em;
+    max-width:100%;
 }
 
 .writing-random-card:hover a{
@@ -479,7 +481,7 @@ li{
 .lists-block{
     display:flex;
     flex-direction: row;
-
+    flex-wrap: wrap;
     width:stretch;
 }
 
@@ -549,8 +551,29 @@ sup a{
     initial-value: 10px;
 }
 
+/*
+#indigo-div{
+    background-image: url(./writings/Indigo.PNG);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: -500% 20%;
+    background-blend-mode: add;
+}
+*/
 
+.ghost-div{
+    height:0;
+}
 
+.ghost-div img{
+    max-width: 100%;
+    min-width: 750px;
+    mix-blend-mode: normal;
+    z-index: 10;
+    position: relative;
+    top:-10vw;
+    left:5vw;
+}
 
 
 /* Elements EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
@@ -613,9 +636,18 @@ footer hr{
     transition:all ease-in-out 0.3s;
 }
 
+#img-20251225{
+    width: 80vw;
+    max-width: 800px;
+}
+
 .artworks .art-images p{
     width:calc(-150px + 25vw);
     min-width:300px;
+}
+
+video{
+    max-width: 95vw;
 }
 
 .artworks .art-images img:hover, #cannotCome:hover{
@@ -626,7 +658,10 @@ footer hr{
     box-shadow: 1px 1px 10px 2px rgb(0, 0, 0);
 }
 
-
+#knzhou-handout-figure{
+    background-color: white;
+    aspect-ratio: 1;
+}
 
 .ptsd-hidden, .lament-hidden{
     font-family:'Courier New', Courier, monospace;
@@ -666,6 +701,23 @@ footer hr{
     height:100px;
     margin:20px;
     float:inline-start;
+}
+.new{
+    display:flex;
+    flex-direction: column;
+}
+
+#ranThonking{
+    height:300px;
+    float:inline-start;
+}
+
+.new-status-holder{
+    background: linear-gradient(to bottom,#000,#1f1f1f 20%, #292929 100%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    min-height: 300px;
+    border:2px solid black;
 }
 
 #cannotCome{
