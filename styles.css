@@ -1,5 +1,6 @@
 :root{
-    --writing-card-dimensions:calc(15vw);
+    --writing-card-dimensionsX:30vw;
+    --writing-card-dimensionsY:15vw;
     box-sizing: border-box;
 }
 
@@ -21,6 +22,7 @@ html{
 
 body{
     margin:0;
+    min-height: 100vh;
 }
 
 main{
@@ -60,6 +62,7 @@ a[href]:hover{
     background:#707070;
     text-shadow:2px 2px 3px #000000 ;
 }
+
 
 /* Nav bar NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN*/
 header{
@@ -155,6 +158,9 @@ nav > p{
     display:contents;
 }
 
+
+
+
 /* About and random page RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
 .about, .random-p > p{
     display:block;
@@ -184,6 +190,7 @@ li{
     min-width: 300px;
     margin:0;
 }
+
 
 /* Poems */
 
@@ -228,109 +235,18 @@ li{
     box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
 }
 
-/*
-#emperor{
-    grid-column: 1;
-    grid-row:1 / 18;
-}
-
-#earth{
-    grid-column: 2;
-    grid-row:1 / 26;
-}
-
-#kite{
-    grid-column: 3;
-    grid-row:1 / 42;
-}
-
-#something{
-    grid-column: 1;
-    grid-row: 18 / 32;
-}
-
-#excerpt-from-The-Vinaya{
-    grid-column:2;
-    grid-row: 26 / 42;
-}
-
-#sunshine{
-    grid-column:1;
-    grid-row: 32 / 42;
-}
-
-#ode-to-past{
-    grid-column:1;
-    grid-row: 42 / 74;
-}
-
-#nothingness{
-    grid-column:2;
-    grid-row: 42 / 46;
-    overflow-y: hidden;
-}
-
-#white-sky{
-    grid-column:3;
-    grid-row: 42 / 54;
-}
-
-#human{
-    grid-column:2;
-    grid-row: 46 / 74;
-}
-
-#PHOTO€L€CTRIC-€FF€CT{
-    grid-column:3;
-    grid-row: 55 / 74;
-}
-
-#dream{
-    grid-column: 2;
-    grid-row:74/134;
-}
-
-#hide-n-seek{
-    grid-column: 1;
-    grid-row:74/96;
-}
-
-#misconception{
-    grid-column:3;
-    grid-row:74/130;
-}
-
-#knowledge{
-    grid-column:1;
-    grid-row:96/102;
-}
-
-#twisted{
-    grid-column:1;
-    grid-row:102/111;
-}
-
-#narcissus{
-    grid-column:1;
-    grid-row:111/124;
-}
-
-*/
-
-
 /* Writings page WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
 .writings-whole-container{
     display:block;
     justify-content: center;
 }
 
-
 .writing-card{
-    width:var(--writing-card-dimensions,10vw);
-    height:var(--writing-card-dimensions,10vw);
+    width:15vw;
+
+    height:fit-content;
     min-width:15rem;
     min-height:15rem;
-    height:fit-content;
 
     padding:var(--card-title-offsetY) 10px 10px;
     margin:2vw;
@@ -344,6 +260,12 @@ li{
     transition: 0.3s ease-in-out, --writing-gradient-color1 0.3s ease-in-out, --writing-gradient-color2 0.3s ease-in-out, --writing-gradient-color3 0.3s ease-in-out, --card-title-offsetY 0.3s ease-in-out, text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+.writing-card.blog{
+    width:var(--writing-card-dimensionsX,30vw);
+    height:var(--writing-card-dimensionsY,15vw);
+    height:fit-content;
+    min-height: 15rem;
+}
 
 .writing-card:hover{
     background-image: linear-gradient(to bottom,var(--writing-gradient-color1,#050505) 0%, var(--writing-gradient-color2,#121212) 20%,var(--writing-gradient-color3,#262626) 100%);
@@ -356,11 +278,6 @@ li{
     
     text-shadow:4px 4px 10px #000000;
     box-shadow: 4px 4px 20px 5px #000000a9;
-}
-
-#beYourStar{
-    max-width: 100%;
-    border:3px solid rgb(219, 219, 219);
 }
 
 .blogs-block{
@@ -423,6 +340,18 @@ li{
     syntax:"<length>";
     inherits: false;
     initial-value: -300px;
+}
+
+@property --writing-card-dimensionsX{
+    syntax:"<length>";
+    inherits: false;
+    initial-value: 25vw;
+}
+
+@property --writing-card-dimensionsY{
+    syntax:"<length>";
+    inherits: false;
+    initial-value: 15vw;
 }
 
 .writing-random-card{
@@ -551,6 +480,12 @@ sup a{
     initial-value: 10px;
 }
 
+#beYourStar{
+    max-width: 100%;
+    max-height: 100vh;
+    border:3px solid rgb(219, 219, 219);   
+}
+
 /*
 #indigo-div{
     background-image: url(./writings/Indigo.PNG);
@@ -649,6 +584,56 @@ footer hr{
 video{
     max-width: 95vw;
 }
+
+.odoku{
+    position:relative;
+}
+
+#odoku1{
+    transform: none;
+    z-index:8;
+    mix-blend-mode: exclusion;
+}
+
+#odoku2{
+    transform: none;
+    z-index:7;
+    mix-blend-mode: multiply;
+}
+
+#odoku3{
+    transform: none;
+    z-index:6;
+    mix-blend-mode: difference;
+}
+
+#odoku4{
+    transform: none;
+    z-index:5;
+    clip-path: url(./works/odoku/odoku5.PNG);
+}
+
+#odoku5{
+    transform: none;
+    z-index:4;
+    mix-blend-mode: exclusion;
+}
+
+#odoku6{
+    transform: none;
+    z-index:3;
+}
+
+#odoku7{
+    transform: none;
+    z-index:2;
+}
+
+#odoku8{
+    transform: none;
+    z-index:1;
+}
+
 
 .artworks .art-images img:hover, #cannotCome:hover{
     transform: scale(1.1);
