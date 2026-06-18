@@ -22,7 +22,7 @@ function getRandomP(){
         break;
     }
     case 6:{
-        return `I understand why people prefer the idea of geniuses and "gifted" so much but I don't buy into the idea. I was extremely confused by the idea of genius when I'm studying——people seemed to regard geniuses as those who know things better, yet "knowledge" is simply obtained by learning, and even if you judge them by how fast they learn, learning can also be learned, so by this definition people can become genius just by acquired efforts, which is contradictory to the definition of genius in the first hand! So how should we define "genius"?[...]`;
+        return `[...]and even if you judge them by how fast they learn, learning can also be learned, so by this definition people can become genius just by acquired efforts, which is contradictory to the definition of genius in the first hand! So how should we define "genius"?[...]`;
         break;
     }
     case 7:{
@@ -54,7 +54,7 @@ function getRandomP(){
         break;
     }
     case 14:{
-        return `Still about fandoms. Shame on those who amthropomize subjects and assign them genders according to stereotypes. I mean stop it I can't take anymore of those stereotypes of math and physics, they annoy me the most. Math is not cold, please, it is the most vast, most beautiful and most accessible subject (that you can really do real research in pure math at this age), and people are picturing it cold just because how hard and possibly boring it appeared in school systems?!`;
+        return `[...] Math is not cold, please, it is the most vast, most beautiful and most accessible subject [...] and people are picturing it cold just because how hard and possibly boring it appeared in school systems?!`;
         break;
     }
     case 15:{
