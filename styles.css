@@ -699,7 +699,7 @@ video{
     flex-direction: column;
 }
 
-#ranThonking{
+#ranThonking, #ranSpeechless{
     height:300px;
     float:inline-start;
 }
