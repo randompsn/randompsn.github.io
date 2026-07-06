@@ -177,9 +177,49 @@ nav > p{
     box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
 }
 
+.random-card{
+    position:absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.random-card.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.random-card p{
+    justify-content: center;
+    
+    min-width:20rem;
+    width:30rem;
+    max-width:80%;
+    padding:calc(5px + 1%) calc(5px + 2%) calc(2px + 3%);
+    margin:30px auto;
+
+    border:1px solid hsla(0,0%,100%,0.3);
+    border-radius:5px;
+    background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#191919 100%);
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+}
+
 .random-p{
     display:flex;
     flex-direction: column-reverse;
+}
+
+.random-card-container{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: max-content;
+    height:30rem;
 }
 
 li{
@@ -556,7 +596,7 @@ footer{
 }
 
 footer hr{
-    max-width:90vw
+    max-width:90vw;
 }
 
 .artworks{
