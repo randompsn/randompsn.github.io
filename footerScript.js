@@ -1,0 +1,3 @@
+function writeFooter{
+    document.write("")
+}
