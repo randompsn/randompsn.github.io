@@ -469,6 +469,14 @@ li{
     overflow: hidden;
 }
 
+/*Tools*/
+.inline-img{
+    width:auto;
+    height:auto;
+    max-height:50vh;
+    max-width:90vw;
+}
+
 .lists-block{
     display:flex;
     flex-direction: row;
