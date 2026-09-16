@@ -742,6 +742,7 @@ video{
     max-width:100vw;
     min-width:600px;
     font-size:calc(60px + 5vw);
+    transition: all 1s cubic-bezier( 0.1, 0.5, 0, 0.79 ) 75ms;
     
     padding:10px 10px 20px 10px;
     background-size:800% 100%;
@@ -749,7 +750,9 @@ video{
 }
 
 #index-h1:hover{
-    animation: welcome 1s cubic-bezier( 0, 0.62, 0.93, 0.79 ) 75ms 1 forwards;
+    animation: welcome 1s cubic-bezier( 0, 0, 0.93, 0.79 ) 75ms 1 forwards;
+    transform:perspective(400px) rotate3d(1,1.5,1.1,10deg) translate3d(-10px, -20px, 20px);  
+    transition: all 1s cubic-bezier( 0, 0, 0.93, 0) 75ms 1 forwards;
 }
 
 #pfp{

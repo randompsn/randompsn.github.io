@@ -1,5 +1,5 @@
 function getRandomP(){
-    const pNumber = Math.floor(Math.random() * 70) + 1;
+    const pNumber = Math.floor(Math.random() * 71) + 1;
     switch (pNumber){
         case 1:{
         return `I believe in the power of choice. I still need more time to phrase my thoughts, but being able to choose from four and being able to choose from 100,000 possibilites are different, even if they made the same choice at last. I shall make The Choice only after I've learned all the options I can choose from.`;
@@ -280,6 +280,10 @@ function getRandomP(){
     }
     case 70:{
         return `发癫，但是学了multivariable和diffeq版：回高中一趟我只觉得自己就是个线性非齐次微分方程描述的谐振子...说不定其实和study load啥的没有一点关系，我只是对高中过敏吧？？？？？？`;
+        break;
+    }
+    case 71:{
+        return `To this day I'm still geniuely thankful to riyang who has dropped such kind words to my website suddenly. Your words means a lot more than you might've thought of, thank you so much.`;
         break;
     }
     }
