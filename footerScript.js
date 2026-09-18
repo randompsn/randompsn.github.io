@@ -1,5 +1,5 @@
 function randomQuote(){
-                        let qNumber = Math.floor(Math.random() * 6) + 1;
+                        let qNumber = Math.floor(Math.random() * 9) + 1;
                         console.log(qNumber);
                         switch(qNumber){
                             case 1:{
@@ -18,7 +18,16 @@ function randomQuote(){
                                 return `<span>Despite everything, it's still me.</span>`;
                                 break;
                             }case 6:{
-                                return `<span>"No matter what you do at the crossroads, keep going forward." - Derek Hutchins, 2025</span>`
+                                return `<span>"No matter what you do at the crossroads, keep going forward." - Derek Hutchins, 2025</span>`;
+                                break;
+                            }case 7:{
+                                return `<span>Only when they start hindering from a goal does certain attributes become problems.</span>`;
+                                break;
+                            }case 8:{
+                                return `<span>Who will witness this yearning?</span>`;
+                                break;
+                            }case 9:{
+                                return `<span>Would you dissect my grayscaled heart? Brain? Universe?</span>`;
                                 break;
                             }
                         }
