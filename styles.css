@@ -792,12 +792,63 @@ main{
             border-radius: 10%;
             transition:all ease-in-out 0.3s;}
     
+
+    .random-doodles-container{
+        display:flex;
+        width:80%;
+        flex-direction: row;
+    }
+    
+    .random-doodle-container{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        padding:0;
+    }
+
+    .random-doodle{
+        inset: 0;
+        opacity: 1;
+        pointer-events: none;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        margin:0;
+        padding:0;
+        min-width:0;
+    }
+
+    .random-doodle.active{
+        display:flex;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+        min-width:0;
+    }
+
+    .random-doodle img{
+        justify-content: center;
+        width:100%;
+        min-width:40vw;
+
+        border:2px solid hsla(0,0%,100%,0.3);
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+    }
+
+
+
+/*
     #randomimg{
         display:block;
         margin:auto;
         width:calc(200px + 10vw + 60%);
         max-width:min(100%,500px);
         z-index: -1;}
+*/
 
     @keyframes welcome{
         0%{
@@ -807,4 +858,5 @@ main{
             background-position: 100% 50%;
         }
     }
+    
 /* End of Index IEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIE*/

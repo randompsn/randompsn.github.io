@@ -18,6 +18,8 @@
                 <p>As known as Annie Wang, <span lang="jp">ランダム</span>, YuruYoru, <span lang="cn">王紫怡</span>, XingYe23z, <span lang="cn">星夜</span>. </p>
                 <p>When I'm not drawing, playing piano, singing at karaoke, writing diary, fighting with ADHD, doomscrolling wikis, stargazing, playing video games, listening to game OSTs, building this website, reading your personal website, post producing in Davinci, playing contract bridge with AA, doing electric engineering, cyberstalking my past self, zoning out, arguing with my parents, applying to college, cooking, trying new outfits,  redesigning my room, tutoring multivariable calculus, getting depressed, or getting nightmares, I do physics.</p>
                 <h2><b>Ran is speaking!</b></h2>
+                <p>Sep 19 10:29AM. If anyone's interested in beta reading any of my upcoming blogs plz drop me a message in discord! By the way, DO NOT go check randomDoodles, my CSS wasn't CSS'in and it looks super wierd right now.</p>
+                <hr>
                 <p>Sep 18 6:53AM PDT. Go check randomDoodles at the bottom of this page <b>it just got 296 pictures in the newest update.</b> I still gotta trim them properly though.</p>
             </div>
             
@@ -168,15 +170,74 @@
                 </ul>
         </section>
 
-            <div class="random-doodle">
+            <div class="random-doodle-section">
                 <h2>Random Doodle</h2>
                 <p>Refresh for a new one!</p>
+            
+                <div class="random-doodles-container">
+                    <div class="button-holder random-button-holder">
+                            <button id="random-doodle-prev" class="button prev-button random-button">Prev</button>
+                    </div>
+                    <script>
+                        function randomnum(x){
+                            return Math.floor(Math.random() * x) + 1;
+                        }
+                    for (let i = 1; i < 100; i++){
+                            document.write('<div class="random-doodle"><img id="randomimg" class="random-doodle-img" src= "works/randomDoodle/ran' + i + '.webp"></div>')};
+                    </script>
+                    <div class="random-doodle-container">
+                        <div class="random-doodle">
+                            <img id="randomimg" class="random-doodle-img" src= "works/randomDoodle/ran1.webp">
+                        </div>
+                        <div class="random-doodle">
+                            <img id="randomimg" class="random-doodle-img" src= "works/randomDoodle/ran2.webp">
+                        </div>
+                        <div class="random-doodle">
+                            <img id="randomimg" class="random-doodle-img" src= "works/randomDoodle/ran3.webp">
+                        </div>
+                    </div>
+                    
+                    <div class="button-holder random-button-holder">
+                        <button id="random-doodle-next" class="button next-button random-button">Next</button>
+                    </div>
+                </div>  
+
+                
+
                 <script>
-                    function randomnum(x){
-                    return Math.floor(Math.random() * x) + 1;
-                }
-                    document.write('<img id="randomimg" src= "works/randomDoodle/ran' + randomnum(419) + '.webp">');
-                    console.log('<img src= "works/randomDoodle/ran' + randomnum(419) + '.webp">');
+                        const randomDoodles = Array.from(document.querySelectorAll(".random-doodle"));
+                        const nextButton = document.querySelector("#random-doodle-next");
+                        const prevButton = document.querySelector("#random-doodle-prev");
+                        let currentIndex = 0;
+
+                        function showDoodle() {
+                            randomDoodles.forEach((doodle, index) => {
+                                const offset = (index - currentIndex + randomDoodles.length) % randomDoodles.length;
+                                const normalizedOffset = offset > randomDoodles.length / 2 ? offset - randomDoodles.length : offset;
+
+                                doodle.classList.toggle("active", normalizedOffset === 0);
+                                doodle.style.transform = `translateX(${normalizedOffset * 100}%)`;
+                                doodle.style.opacity = normalizedOffset === 0 ? "1" : "0";
+                            });
+                        }
+
+                        if (nextButton) {
+                            nextButton.onclick = function () {
+                                currentIndex = (currentIndex + 1) % randomDoodles.length;
+                                showDoodle();
+                            };
+                        }
+
+                        if (prevButton) {
+                            prevButton.onclick = function () {
+                                currentIndex = (currentIndex - 1) % randomDoodles.length;
+                                showDoodle();
+                            };
+                        }
+
+                        if (randomDoodles.length) {
+                            showDoodle();
+                        }
                 </script>
             </div>
 
@@ -194,7 +255,7 @@
 
             <div class="weekly-status-holder">
                     <h3>June W4</h3>
-                    <p>I learned about Rami, a really really fun card game. I've also learned that I don't have to align the wires to make another functioning circuit myself while using a printed board……</p>
+                    <p>I learned about Rami, a really really fun doodle game. I've also learned that I don't have to align the wires to make another functioning circuit myself while using a printed board……</p>
             </div>
 
             <div class="weekly-status-holder">
