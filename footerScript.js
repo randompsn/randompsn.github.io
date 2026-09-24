@@ -1,5 +1,5 @@
 function randomQuote(){
-                        let qNumber = Math.floor(Math.random() * 9) + 1;
+                        let qNumber = Math.floor(Math.random() * 12) + 1;
                         console.log(qNumber);
                         switch(qNumber){
                             case 1:{
@@ -9,7 +9,7 @@ function randomQuote(){
                                 return `<span lang="cn">"選ぶ、私が!"</span>`;
                                 break;
                             }case 3:{
-                                return `<span lang="cn">将一切忘掉，然后歇斯底里地回想。</span>`;
+                                return `<span lang="cn">将一切忘掉，然后歇斯底里地回想。|| Forget all to recall.</span>`;
                                 break;
                             }case 4:{
                                 return `<span>It's only I and science that never leaves me.</span>`;
@@ -28,6 +28,15 @@ function randomQuote(){
                                 break;
                             }case 9:{
                                 return `<span>Would you dissect my grayscaled heart? Brain? Universe?</span>`;
+                                break;
+                            }case 10:{
+                                return `<span>Larping makes me suffer, and so is not larping.</span>`;
+                                break;
+                            }case 11:{
+                                return `<span>I cannot believe. I do not believe.</span>`
+                                break;
+                            }case 12:{
+                                return `<span lang="cn">我张口想说什么 不为给任何人听 也不为给自己听 <br> I part my lips for speech / not to be heard by else / nor to be heard by self</span>`;
                                 break;
                             }
                         }
