@@ -30,7 +30,8 @@ function randomQuote(){
                                 return `<span>Would you dissect my grayscaled heart? Brain? Universe?</span>`;
                                 break;
                             }case 10:{
-                                return `<span>Larping makes me suffer, and so is not larping.</span>`;
+                                return `<span>I've forgotten not what it told me, and I pursued it. Yet, I couldn't figure out whether I'm living against the world in lies or in truths.</span>`
+                                break;
                                 break;
                             }case 11:{
                                 return `<span>I cannot believe. I do not believe.</span>`
@@ -38,9 +39,12 @@ function randomQuote(){
                             }case 12:{
                                 return `<span lang="cn">我张口想说什么 不为给任何人听 也不为给自己听 <br> I part my lips for speech / not to be heard by else / nor to be heard by self</span>`;
                                 break;
-                            }
+                            }case 13:{
+                                return `<span>Make me feel lost.</span>`;
+                                break;
                         }
                     }
+                }
                     document.write(`<footer>
                         <div class="footer-quote">
                                     ${randomQuote()}
@@ -48,7 +52,3 @@ function randomQuote(){
                                     <hr>
                                     Randompsn ©2025-2026. All rights reserved.
                                 </footer>`);
-
-                    
-               
-            

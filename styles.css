@@ -59,7 +59,7 @@ main{
         display:block;
 
         background-image:linear-gradient(to bottom, #080808 0%, #2e2e2ec9 100%);
-        backdrop-filter:blur(2px);
+        backdrop-filter:blur(2px) invert(80%);
         box-shadow:1px 2px 5px #000000;
         
         position:sticky;
@@ -319,13 +319,11 @@ main{
         width:80%;
         min-width:20rem;
         max-width:80%;
-    }
-
-    .random-card.active{
+    }/* active */.random-card.active{
         opacity: 1;
         pointer-events: auto;
         transform: translateX(0);
-    }
+        }
 
     .random-card p{
         justify-content: center;
@@ -748,6 +746,7 @@ main{
     .index{
         display:block;
         justify-content: center;
+        overflow: hidden;
         
         min-width:30rem;
         max-width:100%;
@@ -757,7 +756,10 @@ main{
         border:1px solid hsla(0,0%,100%,0.3);
         border-radius:5px;
         background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#191919 100%);
-        box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+        box-shadow: 
+        2px 2px 2px 2px rgb(0 0 0 / 20%),
+        inset #fcfbfb34 0 0 20px
+        ;
     }   /*Profile Picture*/
         #pfp{
         clip-path: circle();
@@ -765,6 +767,37 @@ main{
         height:100px;
         margin:20px;
         float:inline-start;
+        }
+    
+    .index-hobby-container{
+        display: flex;
+        width:300%;
+        padding:10px 0;
+        min-width: fit-content;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px 2px;
+        position:relative;
+        left: -60px;
+        border: .5px solid #ffffff8a;
+        box-shadow: inset #ffffff42 0 0 4px;
+        background: linear-gradient(to bottom,#0000004a 0%, #000 30%, #0f0f0f 90%, #2d2d2d);
+        z-index: 2;
+        filter: drop-shadow();
+    }   
+        .index-hobby{
+        z-index: 1;
+        font-size: smaller;
+        pointer-events: none;
+        font-family:Verdana, Tahoma, 'sans-serif';
+        width:fit-content;
+        color: #d5d5d5;
+        background: linear-gradient(to bottom,#8988884a 0%, #000 30%, #0f0f0f 90%, #2d2d2d);
+        border: .5px solid #ffffff4e;
+        border-radius: 2px;
+        box-shadow: #77777760 2px 2px 5px;
+        padding: 2px 6px 4px 6px;
+        margin:2px 6px;
         }
 
     .new{
@@ -778,6 +811,7 @@ main{
             min-height: 300px;
             border:2px solid black;
         }
+        
         
     .about{
         box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
