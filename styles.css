@@ -768,14 +768,22 @@ main{
         margin:20px;
         float:inline-start;
         }
-    
+
+     @keyframes loop-x{
+        0%{
+            translate: 0%;
+        }
+        100%{
+            translate: -50%;
+        }
+    }
+
     .index-hobby-container{
-        display: flex;
+        display: block;
         width:300%;
         padding:10px 0;
         min-width: fit-content;
         flex-direction: row;
-        flex-wrap: wrap;
         gap: 10px 2px;
         position:relative;
         left: -60px;
@@ -785,6 +793,29 @@ main{
         z-index: 2;
         filter: drop-shadow();
     }   
+        .index-hobby-row{
+            width:max-content;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            animation: loop-x 18s linear infinite;
+        }.index-hobby-row:hover{
+            animation-play-state: paused;
+            filter: brightness(1.4);
+        }.index-hobby-row:nth-of-type(2){
+            animation-direction: reverse;
+            animation-timing-function:ease-in-out;
+            animation-duration: 25s;
+        }
+        .index-hobby-row:nth-of-type(3){
+            animation-timing-function: ease-in-out;
+        }
+        .index-hobby-row:nth-of-type(4){
+            animation-direction: reverse;
+            animation-timing-function:ease-in-out;
+            animation-duration: 20s;
+        }
+
         .index-hobby{
         z-index: 1;
         font-size: smaller;
@@ -829,30 +860,38 @@ main{
 
     .random-doodles-container{
         display:flex;
-        width:80%;
+        width:100%;
         flex-direction: row;
+        justify-self: center;
     }
     
     .random-doodle-container{
         position: relative;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        flex: 1 1 auto;
+        min-width: 0;
         align-items: center;
-        flex-wrap: nowrap;
-        overflow-y: scroll;
-        overflow-x: hidden;
-
+        overflow: hidden;
         padding:0;
     }
 
     .random-doodle{
-        inset: 0;
+        grid-area: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
         opacity: 1;
         pointer-events: none;
         transition: transform 0.4s ease, opacity 0.4s ease;
         margin:0;
         padding:0;
         min-width:0;
+        border: 0;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
     }
 
     .random-doodle.active{
@@ -864,16 +903,16 @@ main{
     }
 
     .random-doodle img{
-        justify-content: center;
         width:100%;
-        min-width:40vw;
+        height:auto;
+        max-width:500px;
+        min-width:0;
+        box-sizing:border-box;
 
         border:2px solid hsla(0,0%,100%,0.3);
         border-radius: 5px;
         box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
     }
-
-
 
 /*
     #randomimg{
@@ -892,5 +931,6 @@ main{
             background-position: 100% 50%;
         }
     }
+
     
 /* End of Index IEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIE*/
