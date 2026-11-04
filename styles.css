@@ -49,6 +49,7 @@ main{
     background-color:#000000;
 }
 
+/* Also these comments are NOT AI generated. I know that usually only AI will give a damn about comments, but I'm just unusually stubborn about visually optimizing my work enviorment. You'll see why I wrote this in a moment.*/
 /* Nav bar NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN*/
     header{
         margin:0;
@@ -60,8 +61,11 @@ main{
 
         background-image:linear-gradient(to bottom, #080808 0%, #2e2e2ec9 100%);
         backdrop-filter:blur(2px) invert(80%);
-        box-shadow:1px 2px 5px #000000;
-        
+        box-shadow: 
+        2px 2px 2px 2px #00000079,
+        0 10px 30px 2px #010101c9,
+        inset #01010134 0 0 20px 2px;
+
         position:sticky;
         top:0;
         z-index:999;
@@ -124,7 +128,7 @@ main{
             color: #858585;
             pointer-events: none;
         }
-        /* Styling for navs with "Randompsn" by LHS */
+        /* Styling for navs with the title "Randompsn" by LHS */
         nav > p{
             font:normal normal 100 1.5rem Georgia, 'Times New Roman', Times, serif;
             display:contents;
@@ -213,12 +217,25 @@ main{
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
+
+        border:2px solid hsla(0,0%,100%,0.3);
+            border-radius:5px;
+            background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#191919 100%);
+            box-shadow: 
+            2px 2px 2px 2px rgb(0 0 0 / 20%),
+            inset #fcfbfb34 0 0 20px
     }
 
     .creative-block{
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
+
+            border-radius:5px;
+            background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#00000070 100%);
+            box-shadow: 
+            2px 2px 5px #000000ab,
+            inset #fcfbfb4a 0 0 20px;
     }
 
     .random-block{
@@ -234,11 +251,14 @@ main{
         align-items: flex-end;
         justify-content: flex-end;
 
-        background-image: linear-gradient(to bottom,#000,#1f1f1f 20%, #525252 100%);
+        border:1px solid hsla(0,0%,100%,0.3);
+        border-radius:5px;
+        background-image: linear-gradient(to bottom,#0e0e0e 0%, #3d3d3d 20%,#191919 100%);
+        box-shadow: 
+        2px 2px 2px 2px rgb(0 0 0 / 20%),
+        inset #fcfbfb34 0 0 20px;     
         border-radius: 5px;
-    }
-
-    .random-block article{
+    }   .random-block article{
         margin: 0 10px 10px auto;
         text-align:right;
         transition:all 0.3s ease-in-out 0.1s;
@@ -307,6 +327,8 @@ main{
         display:flex;
         width:100%;
         flex-direction: row;
+        justify-content: center;
+        align-content: center;
     }
 
     .random-card{
@@ -315,34 +337,57 @@ main{
         opacity: 0;
         pointer-events: none;
         transition: transform 0.4s ease, opacity 0.4s ease;
-        margin:auto 0 0 0;
-        width:80%;
-        min-width:20rem;
-        max-width:80%;
+        margin:0;
+        width:stretch;
+        min-width:30rem;
+
+        display:flex;
+        align-self: center;
     }/* active */.random-card.active{
         opacity: 1;
         pointer-events: auto;
         transform: translateX(0);
+        max-height: 100%;
         }
 
     .random-card p{
-        justify-content: center;
-        
-        min-width:20rem;
-        width:60%;
-        max-width:80%;
+        width:100%;
         padding:calc(5px + 1%) calc(5px + 2%) calc(2px + 3%);
         margin: 20px 20px;
 
         border:1px solid hsla(0,0%,100%,0.3);
         border-radius:5px;
         background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#191919 100%);
-        box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+        box-shadow: 
+        2px 2px 2px 2px rgb(0 0 0 / 20%),
+        inset #fcfbfb34 0 0 20px;
+        overflow-y: scroll;
     }
 
     .random-p{
         display:flex;
         flex-direction: column-reverse;
+    }
+
+
+    .random-button-holder{
+        width: fit-content;
+        margin: 5px 5px;
+        gap:5%;
+        align-self:center;
+    }/*button*/.random-button{
+        border:1px solid hsla(0,0%,100%,0.3);
+        border-radius:20%;
+        height:8rem;
+        width:4rem;
+        background-image: linear-gradient(to bottom,var(--writing-gradient-color1,#050505) 0%, var(--writing-gradient-color2,#121212) 20%,var(--writing-gradient-color3,#262626) 100%);
+        color: #eee;
+        text-shadow:1px 1px 2px #000000;
+        box-shadow: 
+        2px 2px 2px 2px rgb(0 0 0 / 20%),
+        inset #fcfbfb34 0 0 20px;
+
+        transition: 0.3s ease-in-out, --writing-gradient-color1 0.3s ease-in-out, --writing-gradient-color2 0.3s ease-in-out, --writing-gradient-color3 0.3s ease-in-out, --card-title-offsetY 0.3s ease-in-out, text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
     }
 
     .random-card-container{
@@ -351,34 +396,13 @@ main{
         flex-direction: column-reverse;
         align-items: center;
         flex-wrap: nowrap;
-        overflow-y: scroll;
+        overflow-y: hidden;
         overflow-x: hidden;
 
         height:30rem;
         min-width: 24rem;
-        width:44%;
-        margin:10px 0 10px 0;
-    }
-
-    .random-button-holder{
-        width: fit-content;
-        margin: 5% 0 0 0;
-        gap:5%;
-        align-self:center;
-    }
-
-    .random-button{
-        border:1px solid hsla(0,0%,100%,0.3);
-        border-radius:20%;
-        height:8rem;
-        width:4rem;
-        background-image: linear-gradient(to bottom,var(--writing-gradient-color1,#050505) 0%, var(--writing-gradient-color2,#121212) 20%,var(--writing-gradient-color3,#262626) 100%);
-        color: #eee;
-        text-shadow:1px 1px 2px #000000;
-        box-shadow:2px 2px 5px 2px rgba(0, 0, 0, 0.661);
-  
-
-        transition: 0.3s ease-in-out, --writing-gradient-color1 0.3s ease-in-out, --writing-gradient-color2 0.3s ease-in-out, --writing-gradient-color3 0.3s ease-in-out, --card-title-offsetY 0.3s ease-in-out, text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+        width:stretch;
+        margin:10px 40px;
     }
 
 
@@ -416,9 +440,13 @@ main{
         flex-direction: row;
         flex-wrap: wrap;
         width:stretch;
-    }
 
-    .writing-list-card{
+        border-radius:5px;
+        background-image: linear-gradient(to bottom,#05050590 0%, rgb(18, 18, 18) 20%,#1919197b 100%);
+        box-shadow: 
+        2px 2px 5px 2px rgba(0, 0, 0, 0.904),
+        inset #ffffff1f 0 0 20px
+    }.writing-list-card{
         text-align: center;
         height:50%;
         width:20%;
@@ -437,19 +465,16 @@ main{
         inherits: false;
         initial-value: #050505;
     }
-
     @property --writing-gradient-color2{
         syntax:"<color>";
         inherits: false;
         initial-value: #121212;
     }
-
     @property --writing-gradient-color3{
         syntax:"<color>";
         inherits: false;
         initial-value: #262626;
     }
-
     @property --card-title-offsetY{
         syntax:"<length>";
         inherits: false;
@@ -491,6 +516,7 @@ main{
             height: max-content;
 
             position: relative;
+            
         }
 
         .poems-flexbox p{
@@ -501,8 +527,10 @@ main{
 
             border:1px solid hsla(0,0%,100%,0.3);
             border-radius:5px;
-            background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#262626 100%);
-            box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+            background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#191919 100%);
+            box-shadow: 
+            2px 2px 2px 2px rgb(0 0 0 / 20%),
+            inset #fcfbfb34 0 0 20px;
         }
     /* End of Poems */
 
@@ -628,6 +656,8 @@ main{
         max-width: 1400px;
         margin: 10px auto;
         box-sizing: border-box;
+
+        
     }
 
     #img-20251225{
@@ -735,12 +765,19 @@ main{
             
             padding:10px 10px 20px 10px;
             background-size:800% 100%;
-            background-image:linear-gradient(to right,transparent 0% 25%, #b9b9b985 35%, transparent 40% 50%, #444 55%, transparent 65% 100%)
+            background-image:linear-gradient(to right,transparent 0% 25%, #b9b9b985 35%, transparent 40% 50%, #444 55%, transparent 65% 100%);
+            text-shadow: 
+            2px 2px 10px #ffffff5f,
+            2px 2px 30px #ffffff3c;
         }   /*Hover Effect*/
                 #index-h1:hover{
                     animation: welcome 1s cubic-bezier( 0, 0, 0.93, 0.79 ) 75ms 1 forwards;
-                    transform:perspective(400px) rotate3d(1,1.5,1,10deg) translate3d(-10px, -20px, 20px);  
+                    transform:perspective(400px) rotate3d(1,1.5,1,10deg) translate3d(-10px, -20px, 20px); 
+                    letter-spacing: 5px; 
                     transition: all 1s cubic-bezier( 0, 0, 0.93, 0) 75ms 1 forwards;
+                    text-shadow: 
+                    2px 2px 10px #000000b2,
+                    -10px 10px 40px #b6b6b6c6;
                 }
 
     .index{
@@ -771,25 +808,27 @@ main{
 
      @keyframes loop-x{
         0%{
-            translate: 0%;
+            translate: -33.333%;
         }
         100%{
-            translate: -50%;
+            translate: 0%;
         }
     }
 
     .index-hobby-container{
         display: block;
+
         width:300%;
-        padding:10px 0;
         min-width: fit-content;
-        flex-direction: row;
+        padding:10px 0;
         gap: 10px 2px;
         position:relative;
         left: -60px;
+
         border: .5px solid #ffffff8a;
         box-shadow: inset #ffffff42 0 0 4px;
         background: linear-gradient(to bottom,#0000004a 0%, #000 30%, #0f0f0f 90%, #2d2d2d);
+
         z-index: 2;
         filter: drop-shadow();
     }   
@@ -836,16 +875,28 @@ main{
         flex-direction: column;
     } 
         .new-status-holder{
-            background: linear-gradient(to bottom,#000,#1f1f1f 20%, #292929 100%);
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: larger;
             min-height: 300px;
-            border:2px solid black;
+
+            border:1px solid hsla(0,0%,100%,0.3);
+            border-radius:5px;
+            background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#191919 100%);
+            box-shadow: 
+            2px 2px 2px 2px rgb(0 0 0 / 20%),
+            inset #fcfbfb34 0 0 20px
+            ;
         }
         
         
     .about{
         box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+        border:1px solid hsla(0,0%,100%,0.3);
+            border-radius:5px;
+            background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#191919 100%);
+            box-shadow: 
+            2px 2px 2px 2px rgb(0 0 0 / 20%),
+            inset #fcfbfb34 0 0 20px
     }   /* Images For About Section */
         #ranThonking, #ranSpeechless{
         height:300px;
@@ -873,6 +924,13 @@ main{
         align-items: center;
         overflow: hidden;
         padding:0;
+
+         border:1px solid hsla(0,0%,100%,0.3);
+        border-radius:5px;
+        background-image: linear-gradient(to bottom,#050505 0%, rgb(18, 18, 18) 20%,#191919 100%);
+        box-shadow: 
+        2px 2px 2px 2px rgb(0 0 0 / 20%),
+        inset #fcfbfb34 0 0 20px;
     }
 
     .random-doodle{
@@ -881,6 +939,7 @@ main{
         justify-content: center;
         align-items: center;
         width: 100%;
+        height:100%;
         box-sizing: border-box;
         opacity: 1;
         pointer-events: none;
