@@ -5,6 +5,12 @@
         <meta name="description" content="You've found a random person.">
         <link rel="stylesheet" href="styles.css">
         <title>You've found Randompsn.</title>
+        <script src='https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js'></script>
+        <script>
+            Nutshell.setOptions({
+            dontEmbedHeadings: true
+            });
+        </script>
     </head>
    
     <body>
@@ -15,7 +21,7 @@
         <main>
             <div class="index">
                 <img src="pfp.jpg" id="pfp">
-                <p>As known as <a href="writings/lists/names.html">Annie Wang, <span lang="jp">ランダム</span>, YuruYoru, <span lang="cn">王紫怡</span>, XingYe23z, <span lang="cn">星夜</span></a>. </p>
+                <p>As known as <a href="https://randompsn.github.io/writings/lists/names.html"> Ran, Annie Wang, Wanny, <span lang="jp">ランダム</span>, YuruYoru, <span lang="cn">王紫怡</span>, XingYe23z, <span lang="cn">星夜</span></a>. </p>
                 <p>When I'm not</p>
                 <div class="index-hobby-container">
                     <div class="index-hobby-row">
@@ -115,14 +121,14 @@
             
         <div>
             <h2>WIP Project status</h2>
-            <div class="project-status-holder">
+            <div class="project-status-holder" id="x-project-status-holder">
                 <div class="project-status">
                     <h3>Electric pet based on STM32</h3>
                     <div class="project-status-bar"><p>Aug 29: Everything's going fine except that my voice module (SU-03T) couldn't identify anything other than the start up command; the module is extremely hard to flash due to poor contact that I've spent hours on that, so I'm really pissed and decided to try with a new one. I 've also met difficulties assembling the main board with the 3d printed shell. </p></div>
                 </div>
                 <div class="project-status">
                     <h3>Janne Nahin Denge Tujie Transcribing</h3>
-                    <div class="project-status-bar"><p>Jul 12: I've completely finished the intro and the first chorus. I've also finished transcribing the main vocal throughout and now I need to fill in the accompaniments and add effects. (My dumb ahh brain did not spot "transcription" until like Sep 18 omg, I guess my writing that blog about transcripts did something to my brain)</p></div>
+                    <div class="project-status-bar"><p>Jul 12: I've completely finished the intro and the first chorus. I've also finished transcribing the main vocal throughout and now I need to fill in the accompaniments and add effects.</p></div>
                 </div>
                 
                 <div class="project-status">
@@ -152,37 +158,41 @@
         
 
         <section class="about" id="trivia">
-            <h2>Trivia</h2>
+            <h2>About</h2>
             <div class="trivia-lists">
-            <h3>The standard way to introducing oneself</h3>
+            <h3>The standard stats</h3>
                 <ul>
-                    <li>I'm born in 2009.04.11 and as of today I'm a homeschooled Senior. I came from Shanghai, China.</li>
+                    <li>Born in 2009.04.11 in California, which made me an American born Chinese (ABC). I came from Shanghai, China.</li>
+                    <li>My autistic and confusing takes on orientation and gender might translate to I'm female (legal sex), <a href="#agender">:agender</a>, asexual,  panromantic (questioning), and she/they pronouns. </li>
                     <li>My primary interest lies in physics and I'm currently grinding for (hopefully) IPhO. I also have deep interests in Math, CS, Astronomy, Chemistry, etc.</li>
-                    <li>Outside of academics, I can be found drawing OCs, journaling, calling my friend, playing badminton, cooking, playing piano, coding, playing among us, finding new decluttering tools, losing my mind due to PMDD, etc.</li>
-                    <li id="about-trivia-jacobian">My WeChat bio is "COMPUTE IT WITH SOME DEVILISH JACOBIAN MATRICES". The interpretation goes as follows: Jacobian matrices are so devilish to compute ——> It is hard to change the differentials from a coordinate system to another ——> It is hard for humans to understand other people's thoughts and actions. The format is a reference to the song "Compute It With Some Devilish Alcoholic Steampunk Engines" oftenly featured in rhythm games.</li>
-                    <li>My favorite Goose Goose Duck goose, duck and bird to play is Birdwatcher, Invisible and Raven respectively. (I've only played the CN version so idk what their offical english names are XD)</li>
-                    <li>Unlike how I usually draw my persona, I'm long haired (to waist) IRL, until summer 2026.</li>
-                    <li>I never doubt the fact that I can fly in dreams.</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder">:ADHD</a>, <a href="https://en.wikipedia.org/wiki/Autism">:ASD</a>, <a href="https://en.wikipedia.org/wiki/Borderline_personality_disorder">:BPD</a>, <a href="https://en.wikipedia.org/wiki/Cognitive_disengagement_syndrome">:CDS</a>, <a href="https://en.wikipedia.org/wiki/Complex_post-traumatic_stress_disorder">:C-PTSD</a>, <a href="https://en.wikipedia.org/wiki/Premenstrual_dysphoric_disorder">:PMDD</a>.</li>
+                    <li>Outside of art, I like physics.</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Deflationary_theory_of_truth#Minimalism">:Minimalism (philosophy)</a> and <a href="https://en.wikipedia.org/wiki/Simple_living">:Minimalism (simple living)</a></li>
                 </ul>
             </div>
 
+            <div>
+            <h3 id="x-agender">:x Agender</h3>
+            <p>Official punchline is the gender system is too broke for mine to exist which translates to genderless and/or gender apathetic, but I guess telling people that I'm agender is more efficient.</p>
+            </div>
+
             <div class="trivia-lists">
-            <h3>A more Physics Olympiad flavored way</h3>
+            <h3>The trivia approach to introducing oneself</h3>
             <img src="cannotCome.jpg" id="cannotCome" title="Yes that's our beloved HRK beside me">
                 <ul>
                     <li>Physics was my least favorite subject in G8, just like how Biology was in G7, Chemistry was in G9, Math was until G10.</li>
                     <li>Homeschooling for physics is the best choice I've ever made in my life.</li>
-                    <li>According to my screentime stats, I've been spending an average of 55 minutes/day from Apr to Dec 2025 learning physics on my computer (from April 9th where my first consistent visit of knzhou handouts started). This is an underestimate since I might be reading books or learning outside, but the errors are too small to make an effect (e.g. my total calculated screentime is 14130.17 minutes till now, and adding a correction of 1000 minutes makes it roughly 1h/day. Actually 59.334min.)</li>
-                </ul>
-            </div>
-
-            <div class="trivia-lists">
-            <h3>A descriptive way</h3>
-                <ul>
-                    <li>I'm a huge minimalist and trying my best to make everything I own black and whit.</li>
+                    <li>According to my screentime stats, I've been spending an average of 55 minutes/day from Apr to Dec 2025 learning physics on my computer (from April 9th where my first consistent visit of knzhou handouts started). This is an underestimate since I might be reading books or learning outside, but the errors are too small to make an effect (e.g. my total calculated screentime is 14130.17 minutes till then, and adding a correction of 1000 minutes makes it roughly 1h/day. Actually 59.334min.)</li>
+                    <li>My discord avatar is currently the trolley problem in dark mode. Previous avatars are the light mode version and something from OMORI.</li>
+                    <li id="about-trivia-jacobian">My WeChat bio is "COMPUTE IT WITH SOME DEVILISH JACOBIAN MATRICES". The interpretation goes as follows: Jacobian matrices are so devilish to compute ——> It is hard to change the differentials from a coordinate system to another ——> It is hard for humans to understand other people's thoughts and actions. The format is a reference to the song "Compute It With Some Devilish Alcoholic Steampunk Engines" oftenly featured in rhythm games.</li>
+                    <li>My favorite Goose Goose Duck goose, duck and bird to play is Birdwatcher, Invisible and Raven respectively. (I've only played the CN version so idk what their offical english names are XD)</li>
+                    <li>My favorite minecraft armor trim for netherite armor is silence + netherite ingot. Trust me it's super cool. Outside of netherite armors, I like silence trim on chainmail armor, with quartz on helmet & boot, and iron on chestplate & leggings, which creates a silverfish look.</li>
+                    <li>If you haven't already inferred from this website, I'm a huge minimalist and loves black and white. Some of my recommendations of digital declutter tools <a href="writings/tools.html">here</a>.</li>
                     <li>I'm extremely bad at communicating face to face. When I really want to say something important, I will usually write it down.</li>
                     <li>For some reason, I overweight certain words. For example, "friend" in my dictionary most likely meant "best friends forever" in yours.</li>
-                    <li>ADHD, ASD, BPD, CDS, C-PTSD, PMDD.</li>
+                    <li>Unlike how I usually draw my persona, I'm long haired (to waist) IRL, until summer 2026.</li>
+                    <li>I never doubt the fact that I can fly in dreams.</li>
+                    <li>Favorite minecraft speedrunner is Infume.</li>
                 </ul>
             </div>
 
@@ -190,10 +200,10 @@
             <h3><a href="tests.html">Some personality test results</a></h3>
                 <p>Disclaimer: I don't take personality tests too seriously, but they're fun.</p>
                 <ul>
-                    <li><a href="https://enneatao.com">Enneagram</a>: 5w4, 584 (25 Nov 14)</li>
-                    <li><a href="https://totpyes.com">MBTI</a>: ENTP (25 Nov 14. I think the results would be explained better by high-Te INTP, plus I was INTP for 3 years.) </li>
+                    <li><a href="https://enneatao.com/test/a3464991-904d-4c57-b464-e4509a5f3f89">Enneagram</a>: 5w4, 548 (26 Nov 20)</li>
+                    <li><a href="https://totypes.com">MBTI</a>: INTP (26 Nov 20. Conversely my Ni scored second highest which is a time first, together with Si dropping to 6th when it's usually  3rd.) </li>
                     <li>Big Five: RCOAI (25 Nov 14)</li>
-                    <li><a href="https://test.nuaa.tech/">Animal form</a>: Crow. This test was popular among my peers back in China during November.</li>
+                    <li><a href="https://test.nuaa.tech/">Animal form</a>: Crow. This test was popular among my peers back in China during Nov 2025.</li>
                     <li><a href="https://arealme.com/self-love/cn">Self-love</a>: 589/600 (25 Nov 18)</li>
                     <li>DERS: 144 (24 Aug 02) -> 86 (25 summer)</li>
                     <li>BSL-24: 78 (24 Aug 24) -> 86 (24 Winter) -> 24 (25 summer)</li>
@@ -203,28 +213,36 @@
         
         <section class="about" id="now">
             <h2>Now</h2>
-            <p>What I'm up to. (as of Sep 2026)</p>
+            <p>What I'm up to. (as of Nov 2026)</p>
             <ul>
-                <li>PhO. I really want to.</li>
+                <li>Physics</li>
+                <li>College Applications. I'm confused</li>
                 <li>Web development. I'm learning on freeCodeCamp and implementing whatever I've learned into this website, aka my reason to learn web development. Currently on JavaScript. </li>
-                <li>Swift and SwiftUI. I must say though, 100 days of Swift UI is a bit harsh in terms of pacing and lacking on exercises. (See also: 羊了个羊)</li>
                 <li>Astro. Currently I'm being chill and just memorizing the stars via stellar guesser.</li>
-                <li>I don't want to but college applications :sob:</li>
                 <li>I-130, a.k.a. petition for alien relative. The process is cursed, I hate everything related to governments and laws, but I must do it for AA cause tuition fees and I want to live with him and we'll get married soon or less so why not.</li>
                 <li>I have a WIP animation.</li>
+                <li>Swift and SwiftUI. I must say though, 100 days of Swift UI is a bit harsh in terms of pacing and lacking on exercises. (See also: 羊了个羊)</li>
                 <li>Electric engineering!</li>
+                <li>mcsrranked but I'm coal ranked</li>
             </ul>
         </section>
         
         <section class="about" id="links">
             <h2>Great places to hang out</h2>
             <ul>
-                <li><a href="https://astro.dewodt.com/">Guess Astro</a> and <a href="https://stellarguesser.github.io/play/">Stellar Guesser</a>.</li>
+                <li><a href="https://astro.dewodt.com/">:Guess Astro</a> and <a href="https://stellarguesser.github.io/play/">Stellar Guesser</a>.</li>
                 <li><a href="https://knzhou.github.io">Knzhou.github.io</a> with Kevin Zhou's Handouts, resources, nice readings and links.</li>
                 <li><a href="https://texnique.xyz">TeXnique</a>, a fun game that challenges your LaTeX skills. </li>
                 <li><a href="https://80000hours.org">80000 hours</a> with their career advice.</li>
                 <li><a href="https://note.ms/Ran">Note.ms</a>. Add something after the plain domain and you get a public sharing note which others can also edit. (E.g. type in note.ms/Ran as an example!)</li>
                 <li><a href="https://brainhealthusa.com">Brain Health USA</a>, not only for their psychiatric services but also their goat customer service team. (Shoutout to Marco and Marina who has really helped me the most.) Random reddit advice really is something.</li>
+                <li>My friend Sunny's <a href="https://snylur.github.io">:github page</a> and their amazing story <a href="https://snylur.github.io/fork.pdf">The Curious Incident of the Fork in the Night-Time</a></li>
+            </ul>
+            <h2>Artistic inspirations</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=hSSIe5SbksE">:Wuthering Waves EP3.8 — Lily - "Lily Grace"</a></li>
+                <li><a href="https://www.youtube.com/watch?v=csfPVDnVqiE">:ダイアグラム / 初音ミク</a> by avaraya</li>
+                <li><a href="https://www.youtube.com/watch?v=DLkNQgh4Ons">:メクルメ</a> 篠澤 広</li>
             </ul>
         </section>
 
@@ -258,7 +276,7 @@
                     <li>The stars too! Check out stellar guesser and guess astro.</li>
                 </ul>
         </section>
-
+        
         <div class="random-doodle-section">
                 <h2>Random Doodle</h2>
                 <p>Refresh for a new one!</p>
@@ -267,6 +285,7 @@
                     <div class="button-holder random-button-holder">
                             <button id="random-doodle-prev" class="button prev-button random-button">Prev</button>
                     </div>
+                    <!--This part is vibecoded since I haven't learned a lot of JS yet-->
                     <div class="random-doodle-container">
                         <script>
                             const doodleContainer = document.currentScript.parentElement;
@@ -289,8 +308,6 @@
                         <button id="random-doodle-next" class="button next-button random-button">Next</button>
                     </div>
                 </div>  
-
-                
 
                 <script>
                         const randomDoodles = Array.from(document.querySelectorAll(".random-doodle-container .random-doodle"));
@@ -370,7 +387,7 @@
             </div>
         </div>
         -->
-        <span><p>If you were ever gaslighted by the hobbies section thinking the style's like AI, you are actually gaslighted!</p></span>
+        <span><p>If you think this website is vibecoded, congrats for being intentionally gaslighted!</p></span>
         </main>   
             <script src="./footerScript.js"></script>
     </body>
